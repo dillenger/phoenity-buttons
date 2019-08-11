@@ -1,5 +1,8 @@
 Changelog for Phoenity Buttons
 
+3.1
+Fixed support for the chat-toobar typo fix in Thunderbird 69b1.
+
 3.0
 WebExtension only version for Thunderbird 68 and later.
 Removed support for versions older than Thunderbird 68.
@@ -18,7 +21,7 @@ Fixed Toggle Details twisty color for Thunderbird 63 and later.
 Fixed HTML, Inline & Summary buttons for Thunderbird 67 and later.
 
 2.4
-Added support for the chat-toobar typo fix in Thunderbird 69.
+Added support for the chat-toobar typo fix in Thunderbird 69a1.
 
 2.3
 Simplified WebExtension support for Thunderbird 63 and later.

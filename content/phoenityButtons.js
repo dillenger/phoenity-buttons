@@ -88,7 +88,7 @@ phoenityButtons = {
       document.getElementById("mail-bar3").setAttribute("iconsize","large");
       document.getElementById("phb_iconsize-small").setAttribute("checked",false);
       document.getElementById("phb_chat-iconsize-small").setAttribute("checked",false);
-      if (xulAppInfo.version >= "69.0a1") {
+      if (xulAppInfo.version >= "69") {
       document.getElementById("chat-toolbar").setAttribute("iconsize","large");
       } else {
       document.getElementById("chat-toobar").setAttribute("iconsize","large");
@@ -99,7 +99,7 @@ phoenityButtons = {
       document.getElementById("mail-bar3").setAttribute("iconsize","small");
       document.getElementById("phb_iconsize-small").setAttribute("checked",true);
       document.getElementById("phb_chat-iconsize-small").setAttribute("checked",true);
-      if (xulAppInfo.version >= "69.0a1") {
+      if (xulAppInfo.version >= "69") {
       document.getElementById("chat-toolbar").setAttribute("iconsize","small");
       } else {
       document.getElementById("chat-toobar").setAttribute("iconsize","small");
@@ -115,7 +115,7 @@ phoenityButtons = {
       document.getElementById("mail-bar3").setAttribute("iconsize","large");
       document.getElementById("phb_iconsize-small").setAttribute("checked",false);
       document.getElementById("phb_chat-iconsize-small").setAttribute("checked",false);
-      if (xulAppInfo.version >= "69.0a1") {
+      if (xulAppInfo.version >= "69") {
       document.getElementById("chat-toolbar").setAttribute("iconsize","large");
       } else {
       document.getElementById("chat-toobar").setAttribute("iconsize","large");
@@ -126,7 +126,7 @@ phoenityButtons = {
       document.getElementById("mail-bar3").setAttribute("iconsize","small");
       document.getElementById("phb_iconsize-small").setAttribute("checked",true);
       document.getElementById("phb_chat-iconsize-small").setAttribute("checked",true);
-      if (xulAppInfo.version >= "69.0a1") {
+      if (xulAppInfo.version >= "69") {
       document.getElementById("chat-toolbar").setAttribute("iconsize","small");
       } else {
       document.getElementById("chat-toobar").setAttribute("iconsize","small");
