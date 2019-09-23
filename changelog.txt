@@ -1,5 +1,10 @@
 Changelog for Phoenity Buttons
 
+3.2
+Removed Show Title Bar items from the Customize dialogs.
+Added about Phoenity Buttons dialog.
+Improved support for large & small icons.
+
 3.1
 Fixed support for the chat-toobar typo fix in Thunderbird 69b1.
 

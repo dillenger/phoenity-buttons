@@ -4,7 +4,6 @@ if ("undefined" == typeof(phoenityButtons)) {
 
 var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
 var prefServiceBranch = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("");
-var xulAppInfo = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULAppInfo);
 
 Services.obs.notifyObservers(null, "startupcache-invalidate");
 
@@ -88,10 +87,24 @@ phoenityButtons = {
       document.getElementById("mail-bar3").setAttribute("iconsize","large");
       document.getElementById("phb_iconsize-small").setAttribute("checked",false);
       document.getElementById("phb_chat-iconsize-small").setAttribute("checked",false);
-      if (xulAppInfo.version >= "69") {
+      if (document.getElementById("chat-toolbar") != null) {
       document.getElementById("chat-toolbar").setAttribute("iconsize","large");
       } else {
       document.getElementById("chat-toobar").setAttribute("iconsize","large");
+      }
+      if (document.getElementById("cardbook-toolbar") != null) {
+      document.getElementById("cardbook-toolbar").setAttribute("iconsize","large");
+      }
+      if (document.getElementById("phb_cardbook-iconsize-small") != null) {
+      document.getElementById("phb_cardbook-iconsize-small").setAttribute("checked",false);
+      }
+      if (document.getElementById("calendar-toolbar2") != null) {
+      document.getElementById("calendar-toolbar2").setAttribute("iconsize","large");
+      document.getElementById("task-toolbar2").setAttribute("iconsize","large");
+      }
+      if (document.getElementById("phb_calendar-iconsize-small") != null) {
+      document.getElementById("phb_calendar-iconsize-small").setAttribute("checked",false);
+      document.getElementById("phb_task-iconsize-small").setAttribute("checked",false);
       }
       break;
       default:
@@ -99,10 +112,24 @@ phoenityButtons = {
       document.getElementById("mail-bar3").setAttribute("iconsize","small");
       document.getElementById("phb_iconsize-small").setAttribute("checked",true);
       document.getElementById("phb_chat-iconsize-small").setAttribute("checked",true);
-      if (xulAppInfo.version >= "69") {
+      if (document.getElementById("chat-toolbar") != null) {
       document.getElementById("chat-toolbar").setAttribute("iconsize","small");
       } else {
       document.getElementById("chat-toobar").setAttribute("iconsize","small");
+      }
+      if (document.getElementById("cardbook-toolbar") != null) {
+      document.getElementById("cardbook-toolbar").setAttribute("iconsize","small");
+      }
+      if (document.getElementById("phb_cardbook-iconsize-small") != null) {
+      document.getElementById("phb_cardbook-iconsize-small").setAttribute("checked",true);
+      }
+      if (document.getElementById("calendar-toolbar2") != null) {
+      document.getElementById("calendar-toolbar2").setAttribute("iconsize","small");
+      document.getElementById("task-toolbar2").setAttribute("iconsize","small");
+      }
+      if (document.getElementById("phb_calendar-iconsize-small") != null) {
+      document.getElementById("phb_calendar-iconsize-small").setAttribute("checked",true);
+      document.getElementById("phb_task-iconsize-small").setAttribute("checked",true);
       }
     }
   },
@@ -115,10 +142,20 @@ phoenityButtons = {
       document.getElementById("mail-bar3").setAttribute("iconsize","large");
       document.getElementById("phb_iconsize-small").setAttribute("checked",false);
       document.getElementById("phb_chat-iconsize-small").setAttribute("checked",false);
-      if (xulAppInfo.version >= "69") {
+      if (document.getElementById("chat-toolbar") != null) {
       document.getElementById("chat-toolbar").setAttribute("iconsize","large");
       } else {
       document.getElementById("chat-toobar").setAttribute("iconsize","large");
+      }
+      if (document.getElementById("cardbook-toolbar") != null) {
+      document.getElementById("cardbook-toolbar").setAttribute("iconsize","large");
+      document.getElementById("phb_cardbook-iconsize-small").setAttribute("checked",false);
+      }
+      if (document.getElementById("calendar-toolbar2") != null) {
+      document.getElementById("calendar-toolbar2").setAttribute("iconsize","large");
+      document.getElementById("task-toolbar2").setAttribute("iconsize","large");
+      document.getElementById("phb_calendar-iconsize-small").setAttribute("checked",false);
+      document.getElementById("phb_task-iconsize-small").setAttribute("checked",false);
       }
       break;
       default: prefs.setBoolPref('extensions.phoenitybuttons.iconsize.small',true);
@@ -126,10 +163,20 @@ phoenityButtons = {
       document.getElementById("mail-bar3").setAttribute("iconsize","small");
       document.getElementById("phb_iconsize-small").setAttribute("checked",true);
       document.getElementById("phb_chat-iconsize-small").setAttribute("checked",true);
-      if (xulAppInfo.version >= "69") {
+      if (document.getElementById("chat-toolbar") != null) {
       document.getElementById("chat-toolbar").setAttribute("iconsize","small");
       } else {
       document.getElementById("chat-toobar").setAttribute("iconsize","small");
+      }
+      if (document.getElementById("cardbook-toolbar") != null) {
+      document.getElementById("cardbook-toolbar").setAttribute("iconsize","small");
+      document.getElementById("phb_cardbook-iconsize-small").setAttribute("checked",true);
+      }
+      if (document.getElementById("calendar-toolbar2") != null) {
+      document.getElementById("calendar-toolbar2").setAttribute("iconsize","small");
+      document.getElementById("task-toolbar2").setAttribute("iconsize","small");
+      document.getElementById("phb_calendar-iconsize-small").setAttribute("checked",true);
+      document.getElementById("phb_task-iconsize-small").setAttribute("checked",true);
       }
     }
   },
@@ -139,18 +186,50 @@ phoenityButtons = {
       case false:
       document.getElementById("phb_drawTabsInTitlebar").setAttribute("checked",false);
       document.getElementById("phb_drawTabsInTitlebar2").setAttribute("checked",false);
+      if (document.getElementById("calendar-toolbar2") != null) {
+      document.getElementById("phb_drawTabsInTitlebar3").setAttribute("checked",false);
+      document.getElementById("phb_drawTabsInTitlebar4").setAttribute("checked",false);
+      }
+      if (document.getElementById("cardbook-toolbar") != null) {
+      document.getElementById("phb_drawTabsInTitlebar5").setAttribute("checked",false);
+      }
       break;
       default:
       document.getElementById("phb_drawTabsInTitlebar").setAttribute("checked",true);
       document.getElementById("phb_drawTabsInTitlebar2").setAttribute("checked",true);
+      if (document.getElementById("calendar-toolbar2") != null) {
+      document.getElementById("phb_drawTabsInTitlebar3").setAttribute("checked",true);
+      document.getElementById("phb_drawTabsInTitlebar4").setAttribute("checked",true);
+      }
+      if (document.getElementById("cardbook-toolbar") != null) {
+      document.getElementById("phb_drawTabsInTitlebar5").setAttribute("checked",true);
+      }
     }
   },
 
   drawTabsInTitlebar: function() {
     switch(prefs.getBoolPref('mail.tabs.drawInTitlebar')) {
       case true: prefs.setBoolPref('mail.tabs.drawInTitlebar',false);
+      document.getElementById("phb_drawTabsInTitlebar").setAttribute("checked",false);
+      document.getElementById("phb_drawTabsInTitlebar2").setAttribute("checked",false);
+      if (document.getElementById("calendar-toolbar2") != null) {
+      document.getElementById("phb_drawTabsInTitlebar3").setAttribute("checked",false);
+      document.getElementById("phb_drawTabsInTitlebar4").setAttribute("checked",false);
+      }
+      if (document.getElementById("cardbook-toolbar") != null) {
+      document.getElementById("phb_drawTabsInTitlebar5").setAttribute("checked",false);
+      }
       break;
       default: prefs.setBoolPref('mail.tabs.drawInTitlebar',true);
+      document.getElementById("phb_drawTabsInTitlebar").setAttribute("checked",true);
+      document.getElementById("phb_drawTabsInTitlebar2").setAttribute("checked",true);
+      if (document.getElementById("calendar-toolbar2") != null) {
+      document.getElementById("phb_drawTabsInTitlebar3").setAttribute("checked",true);
+      document.getElementById("phb_drawTabsInTitlebar4").setAttribute("checked",true);
+      }
+      if (document.getElementById("cardbook-toolbar") != null) {
+      document.getElementById("phb_drawTabsInTitlebar5").setAttribute("checked",true);
+      }
     }
   },
 

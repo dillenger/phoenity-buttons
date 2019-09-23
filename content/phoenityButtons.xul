@@ -75,14 +75,65 @@
                  insertbefore="CustomizeChatToolbar"/>
 </menupopup>
 
+<menupopup id="calendar-toolbar-context">
+  <menuitem id="phb_drawTabsInTitlebar3"
+            insertbefore="CustomizeCalendarToolbar"
+            type="checkbox"
+            oncommand="phoenityButtons.drawTabsInTitlebar();"
+            label="&phoenityButtons.drawTabsInTitlebar;"/>
+  <menuitem id="phb_calendar-iconsize-small"
+            insertbefore="CustomizeCalendarToolbar"
+            type="checkbox"
+            label="&phoenityButtons.useSmallIcons;"
+            oncommand="phoenityButtons.toggleIconSize();"/>
+  <menuseparator id="phb_CustomizeCalendarToolbar"
+                 insertbefore="CustomizeCalendarToolbar"/>
+</menupopup>
+
+<menupopup id="task-toolbar-context">
+  <menuitem id="phb_drawTabsInTitlebar4"
+            insertbefore="CustomizeTaskToolbar"
+            type="checkbox"
+            oncommand="phoenityButtons.drawTabsInTitlebar();"
+            label="&phoenityButtons.drawTabsInTitlebar;"/>
+  <menuitem id="phb_task-iconsize-small"
+            insertbefore="CustomizeTaskToolbar"
+            type="checkbox"
+            label="&phoenityButtons.useSmallIcons;"
+            oncommand="phoenityButtons.toggleIconSize();"/>
+  <menuseparator id="phb_CustomizeTaskToolbar"
+                 insertbefore="CustomizeTaskToolbar"/>
+</menupopup>
+
+<menupopup id="cardbook-toolbar-context">
+  <menuitem id="phb_drawTabsInTitlebar5"
+            insertbefore="CustomizeCardBookToolbar"
+            type="checkbox"
+            oncommand="phoenityButtons.drawTabsInTitlebar();"
+            label="&phoenityButtons.drawTabsInTitlebar;"/>
+  <menuitem id="phb_cardbook-iconsize-small"
+            insertbefore="CustomizeCardBookToolbar"
+            type="checkbox"
+            label="&phoenityButtons.useSmallIcons;"
+            oncommand="phoenityButtons.toggleIconSize();"/>
+  <menuseparator id="phb_CustomizeCardBookToolbar"
+                 insertbefore="CustomizeCardBookToolbar"/>
+</menupopup>
+
 <toolbar id="tabs-toolbar">
- <toolbar id="phb_pretab-toolbar" toolboxid="mail-toolbox"
+ <toolbar id="phb_pretab-toolbar"
+          is="customizable-toolbar"
+          toolboxid="mail-toolbox"
           context="toolbar-context-menu"
           insertbefore="tabcontainer,tabmail-tabs"
           customizable="true"
           mode="icons" defaultmode="icons" lockmode="true"
           iconsize="small" defaulticonsize="small" lockiconsize="true"
           defaultset="button-appmenu"/>
+ <toolbar id="tabbar-toolbar"
+          defaultset="button-addons,phb_configEditor,phb_preferences,
+          phb_devtoolbox,phb_filterManager,phb_activityManager,
+          qfb-show-filter-bar,phb_restartThunderbird"/>
 </toolbar>
 
 <vbox id="otherActionsBox"

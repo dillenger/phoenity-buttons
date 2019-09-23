@@ -5,8 +5,11 @@
   "version": "3.2",
   "author": "Dillinger",
   "homepage_url": "https://addons.thunderbird.net/en-US/thunderbird/addon/phoenity-buttons/",
-  "legacy": {
-    "type": "xul"
+  "legacy" : {
+    "options" : {
+      "page" : "chrome://phoenityButtons/content/aboutButtons.xul",
+      "open_in_tab" : false
+    }
   },
   "applications": {
     "gecko": {
