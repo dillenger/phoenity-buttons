@@ -1,5 +1,42 @@
 Changelog for Phoenity Buttons
 
+4.1
+Fixed Restart & Config buttons for Thunderbird 91.
+
+4.0
+Complete rewrite for Thunderbird 78, support for older versions has been removed.
+Currently only a few (unmovable) buttons are available:
+- Search Messages, Config Editor, Developer Tools, Preferences & Restart.
+- The Restart button is inserted at the end of the Tab Bar.
+- The Search Messages button is inserted after the Quick Filter button.
+- All other buttons are inserted after the Add-ons button.
+- Inserted buttons will disappear if you remove their "parent" button.
+- It may be necessary to restart Thunderbird for buttons to move or appear.
+For some of the old toolbar buttons separate extensions have been written.
+
+3.8
+Added tooltips for HTML, Inline and Summary buttons to reflect the state they're in.
+Added disabled state for some buttons when there is nothing to show, hide or toggle.
+Removed some obsolete opacity rules.
+
+3.7
+Fixed a bug which disabled some buttons after customization.
+
+3.6
+Added Find button (Search messages).
+
+3.5
+Fixed compatibility with the CompactHeader extension.
+Fixed descriptions in all supported locales.
+Fixed Developer Toolbox button for Thunderbird 72.
+
+3.4
+Added German locale.
+Added Profile button (Open profile directory).
+
+3.3
+Fixed compact headers for Thunderbird 71.
+
 3.2
 Removed Show Title Bar items from the Customize dialogs.
 Added about Phoenity Buttons dialog.
