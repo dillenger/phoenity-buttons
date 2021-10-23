@@ -1,4 +1,4 @@
-# buttons-dillinger
+# phoenity-buttons
 About this Add-on:
 
 Adds some toolbar buttons using phoenity icons.
