@@ -71,11 +71,7 @@ var phoenityButtonsApi = class extends ExtensionCommon.ExtensionAPI {
                 let configButtonIcon = context.extension.rootURI.resolve("icons/configButton.png");
                 configButton.setAttribute("image", configButtonIcon);
                 configButton.setAttribute("tooltiptext", "Config Editor");
-                if (xulAppInfo.version >= "91.0") {
-                  configButton.addEventListener("command", () => window.openDialog("chrome://global/content/aboutconfig/aboutconfig.html","","width=800,height=600"));
-                } else {
-                  configButton.addEventListener("command", () => window.openDialog("chrome://global/content/config.xhtml","","centerscreen,resizable"));
-                }
+                configButton.addEventListener("command", () => window.openDialog("about:config","","width=800,height=600,centerscreen,resizable"));
                 //targetToolbar.appendChild(configButton);
                 if (addonsButton) addonsButton.insertAdjacentElement("afterend", configButton);
               //} else {
@@ -94,11 +90,7 @@ var phoenityButtonsApi = class extends ExtensionCommon.ExtensionAPI {
                 let restartButtonIcon = context.extension.rootURI.resolve("icons/restartButton.png");
                 restartButton.setAttribute("image", restartButtonIcon);
                 restartButton.setAttribute("tooltiptext", "Restart Thunderbird");
-                if (xulAppInfo.version >= "91.0") {
-                  restartButton.addEventListener("command", () => MailUtils.restartApplication());
-                } else {
-                  restartButton.addEventListener("command", () => BrowserUtils.restartApplication());
-                }
+                restartButton.addEventListener("command", () => MailUtils.restartApplication());
                 targetToolbar.appendChild(restartButton);
               //} else {
                 //restartButton.removeAttribute("hidden");

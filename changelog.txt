@@ -1,5 +1,12 @@
 Changelog for Phoenity Buttons
 
+4.3
+Set minimum version to Thunderbird 91.0.
+Set maximum version to Thunderbird 102.*.
+
+4.2
+Fixed Restart & Config buttons for Thunderbird 100.
+
 4.1
 Fixed Restart & Config buttons for Thunderbird 91.
 
