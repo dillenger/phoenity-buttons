@@ -29,7 +29,7 @@
     "gecko": {
       "id": "buttons@dillinger",
       "strict_min_version": "91.0",
-      "strict_max_version": "107.0"
+      "strict_max_version": "108.0"
     }
   },
   "icons": {
