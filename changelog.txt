@@ -1,5 +1,12 @@
 Changelog for Phoenity Buttons
 
+5.0
+Supernova update, removed unused icons.
+Moved all buttons to the Tab Bar Toolbar.
+Fixed Search Button for Thunderbird 112.0.
+Set minimum version to Thunderbird 112.0.
+Set maximum version to Thunderbird 115.*.
+
 4.3
 Set minimum version to Thunderbird 91.0.
 Set maximum version to Thunderbird 102.*.
