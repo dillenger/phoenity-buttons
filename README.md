@@ -5,7 +5,7 @@ Adds some toolbar buttons using phoenity icons.
 
 Complete rewrite for Thunderbird 112, support for older versions has been removed.
 
-Currently only a few (unmovable) buttons are available:
+Currently only a few buttons are available:
 - Search Messages, Config Editor, Developer Tools, Preferences & Restart.
 - All buttons are inserted at the end of the Tab Bar, but can be moved.
 - It may be necessary to restart Thunderbird for buttons to move or appear.
