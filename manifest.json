@@ -25,11 +25,11 @@
       "phoenityButtons.js"
     ]
   },
-  "applications": {
+  "browser_specific_settings": {
     "gecko": {
       "id": "buttons@dillinger",
       "strict_min_version": "115.0",
-      "strict_max_version": "127.*"
+      "strict_max_version": "128.*"
     }
   },
   "icons": {
