@@ -1,7 +1,6 @@
-var { ExtensionCommon } = ChromeUtils.import("resource://gre/modules/ExtensionCommon.jsm");
-var { ExtensionSupport } = ChromeUtils.import("resource:///modules/ExtensionSupport.jsm");
-var Services = globalThis.Services || ChromeUtils.import("resource://gre/modules/Services.jsm");
-var { MailUtils } = ChromeUtils.import("resource:///modules/MailUtils.jsm");
+var { ExtensionCommon } = ChromeUtils.importESModule("resource://gre/modules/ExtensionCommon.sys.mjs");
+var { ExtensionSupport } = ChromeUtils.importESModule("resource:///modules/ExtensionSupport.sys.mjs");
+var { MailUtils } = ChromeUtils.importESModule("resource:///modules/MailUtils.sys.mjs");
 var xulAppInfo = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULAppInfo);
 
 var phoenityButtonsApi = class extends ExtensionCommon.ExtensionAPI {

@@ -1,5 +1,8 @@
 Changelog for Phoenity Buttons
 
+5.2
+ESMified the add-on.
+
 5.1
 Supernova update 2, moved all buttons to the Tab Bar.
 Re-added Add-ons and Themes button.
