@@ -16,20 +16,20 @@
             "phoenityButtonsApi"
           ]
         ],
-        "script": "phoenityButtonsApi.js"
+        "script": "implementation.js"
       }
     }
   },
   "background": {
     "scripts": [
-      "phoenityButtons.js"
+      "background.js"
     ]
   },
   "browser_specific_settings": {
     "gecko": {
       "id": "buttons@dillinger",
       "strict_min_version": "128.0",
-      "strict_max_version": "*"
+      "strict_max_version": "136.*"
     }
   },
   "icons": {
