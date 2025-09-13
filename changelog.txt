@@ -1,5 +1,10 @@
 Changelog for Phoenity Buttons
 
+5.3
+Fixed the Search Button for Thunderbird 141.
+Set minimum version to Thunderbird 141.0.
+Set maximum version to Thunderbird 143.*.
+
 5.2
 ESMified the add-on.
 Set minimum version to Thunderbird 128.0.

@@ -82,7 +82,7 @@ var phoenityButtonsApi = class extends ExtensionCommon.ExtensionAPI {
                 let searchButtonIcon = context.extension.rootURI.resolve("icons/searchButton.png");
                 searchButton.setAttribute("image", searchButtonIcon);
                 searchButton.setAttribute("tooltiptext", "Search Messages");
-                searchButton.addEventListener("command", () => window.goDoCommand("cmd_searchMessages"));
+                searchButton.addEventListener("command", () => window.searchAllMessages());
                 searchButton.style.maxWidth = "0px";
                 targetToolbar.appendChild(searchButton);
               }
