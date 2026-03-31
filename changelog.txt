@@ -1,5 +1,11 @@
 Changelog for Phoenity Buttons
 
+5.4
+Fixed the Preferences Button for Thunderbird 150.
+Added version check to improve compatibility with older versions.
+Set minimum version to Thunderbird 128.0.
+Set maximum version to Thunderbird 151.*.
+
 5.3
 Fixed the Search Button for Thunderbird 141.
 Set minimum version to Thunderbird 141.0.

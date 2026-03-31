@@ -3,33 +3,25 @@
   "name": "Phoenity Buttons",
   "description": "Adds Config Editor, Developer Tools, Preferences, Search Messages and Restart buttons",
   "homepage_url": "https://addons.thunderbird.net/en-US/thunderbird/addon/phoenity-buttons/",
-  "version": "5.3",
+  "version": "5.4",
   "experiment_apis": {
     "phoenityButtonsApi": {
       "schema": "schema.json",
       "parent": {
-        "scopes": [
-          "addon_parent"
-        ],
-        "paths": [
-          [
-            "phoenityButtonsApi"
-          ]
-        ],
+        "scopes": ["addon_parent"],
+        "paths": [["phoenityButtonsApi"]],
         "script": "implementation.js"
       }
     }
   },
   "background": {
-    "scripts": [
-      "background.js"
-    ]
+    "scripts": ["background.js"]
   },
   "browser_specific_settings": {
     "gecko": {
       "id": "buttons@dillinger",
-      "strict_min_version": "141.0",
-      "strict_max_version": "*"
+      "strict_min_version": "128.0",
+      "strict_max_version": "151.*"
     }
   },
   "icons": {

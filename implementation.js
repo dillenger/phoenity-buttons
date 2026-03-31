@@ -2,6 +2,14 @@ var { ExtensionCommon } = ChromeUtils.importESModule("resource://gre/modules/Ext
 var { ExtensionSupport } = ChromeUtils.importESModule("resource:///modules/ExtensionSupport.sys.mjs");
 var { MailUtils } = ChromeUtils.importESModule("resource:///modules/MailUtils.sys.mjs");
 
+function getThunderbirdVersion() {
+  let parts = Services.appinfo.version.split(".");
+  return {
+    major: parseInt(parts[0]),
+    minor: parseInt(parts[1]),
+  }
+}
+
 var phoenityButtonsApi = class extends ExtensionCommon.ExtensionAPI {
   getAPI(context) {
     return {
@@ -67,7 +75,7 @@ var phoenityButtonsApi = class extends ExtensionCommon.ExtensionAPI {
                 let prefsButtonIcon = context.extension.rootURI.resolve("icons/prefsButton.png");
                 prefsButton.setAttribute("image", prefsButtonIcon);
                 prefsButton.setAttribute("tooltiptext", "Preferences");
-                prefsButton.addEventListener("command", () => window.openOptionsDialog());
+                prefsButton.addEventListener("command", () => window.openPreferencesTab());
                 targetToolbar.appendChild(prefsButton);
               }
 
@@ -81,8 +89,8 @@ var phoenityButtonsApi = class extends ExtensionCommon.ExtensionAPI {
                 let searchButtonIcon = context.extension.rootURI.resolve("icons/searchButton.png");
                 searchButton.setAttribute("image", searchButtonIcon);
                 searchButton.setAttribute("tooltiptext", "Search Messages");
-                searchButton.addEventListener("command", () => window.searchAllMessages());
-                searchButton.style.maxWidth = "0px";
+                if (getThunderbirdVersion().major < 141) searchButton.addEventListener("command", () => window.goDoCommand("cmd_searchMessages"));
+                else searchButton.addEventListener("command", () => window.searchAllMessages());
                 targetToolbar.appendChild(searchButton);
               }
 
